@@ -1,0 +1,13 @@
+### Rev2 -> Rev3
+
+* add soldermask & silkscreen
+* increase fill gap / spacing
+* stop ground pour from under ferrite bead
+* kapton ferrite bead
+* move C4 up slightly
+* expand footprint for IN5401 - diodes for voltage doubler - "just a bit"
+* clear ground pour from igbt / diode / heatsink area
+* drop dumb via on 5v rail above right pot
+* cap to ferrite needs connection duplicated to top
+* thermal the ground connections on the voltage doubler caps
+* add bleeder resistor to caps
