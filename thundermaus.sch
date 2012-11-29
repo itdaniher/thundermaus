@@ -15379,7 +15379,6 @@ Source: http://www.buerklin.com, http://catalog.tycoelectronics.com</description
 <part name="Q3" library="transistor-fet" deviceset="2N7000" device="" value="2n7000"/>
 <part name="VR1" library="pot2" deviceset="PTV09" device="" value=""/>
 <part name="VR2" library="pot2" deviceset="PTV09" device="" value=""/>
-<part name="D6" library="diode" deviceset="1N5333" device="" value="1N5353"/>
 <part name="D7" library="diode" deviceset="1N5333" device="" value="1N5353"/>
 <part name="LED2" library="led" deviceset="LED" device="5MM"/>
 <part name="R3" library="rcl" deviceset="R-US_" device="0207/10" value="470."/>
@@ -15456,7 +15455,6 @@ Source: http://www.buerklin.com, http://catalog.tycoelectronics.com</description
 <instance part="Q3" gate="G$1" x="93.98" y="27.94"/>
 <instance part="VR1" gate="&gt;NAME" x="137.16" y="-25.4" rot="MR0"/>
 <instance part="VR2" gate="&gt;NAME" x="162.56" y="-25.4" rot="MR0"/>
-<instance part="D6" gate="1" x="58.42" y="48.26" rot="R90"/>
 <instance part="D7" gate="1" x="22.86" y="-12.7" rot="R90"/>
 <instance part="LED2" gate="G$1" x="12.7" y="-15.24"/>
 <instance part="R3" gate="G$1" x="12.7" y="-7.62" rot="R270"/>
@@ -15573,8 +15571,7 @@ Source: http://www.buerklin.com, http://catalog.tycoelectronics.com</description
 <wire x1="99.06" y1="43.18" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="43.18" x2="76.2" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="48.26" x2="76.2" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="43.18" x2="58.42" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="43.18" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="43.18" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="43.18" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="43.18" x2="132.08" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="43.18" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
@@ -15603,18 +15600,6 @@ Source: http://www.buerklin.com, http://catalog.tycoelectronics.com</description
 <wire x1="0" y1="43.18" x2="-2.54" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="GND" gate="-1" pin="1"/>
 <wire x1="0" y1="43.18" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="55.88" x2="58.42" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="55.88" x2="68.58" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="55.88" x2="68.58" y2="35.56" width="0.1524" layer="91"/>
-<junction x="68.58" y="55.88"/>
-<pinref part="D5" gate="1" pin="A"/>
-<pinref part="IC1" gate="1" pin="IN"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="D6" gate="1" pin="C"/>
-<wire x1="58.42" y1="50.8" x2="58.42" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="D6" gate="1" pin="A"/>
-<wire x1="58.42" y1="50.8" x2="58.42" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="45.72" x2="58.42" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="81.28" y1="-58.42" x2="96.52" y2="-58.42" width="0.1524" layer="91"/>
@@ -15923,6 +15908,16 @@ Source: http://www.buerklin.com, http://catalog.tycoelectronics.com</description
 <segment>
 <pinref part="LED3" gate="G$1" pin="A"/>
 <pinref part="R5" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="68.58" y1="55.88" x2="68.58" y2="35.56" width="0.1524" layer="91"/>
+<junction x="68.58" y="55.88"/>
+<pinref part="IC1" gate="1" pin="IN"/>
+<wire x1="38.1" y1="55.88" x2="68.58" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="D5" gate="1" pin="A"/>
 </segment>
 </net>
 </nets>
