@@ -39,7 +39,7 @@ volatile uint8_t mode_select;
 uint32_t burst_per, pulse_per;
 uint16_t pulse_width;
 volatile uint16_t integrator, temp_ADC, counter, counter_copy, waiting_counter;
-
+uint16_t i;
 
 int main (void)
 {
@@ -96,9 +96,11 @@ int main (void)
 					PORTB &= 0b11111101;	
 					OCR0A = pulse_width;
 					TCCR0B	=	0b00000011;			//set clock for /64, so 8uS per count.
-					_delay_us(START_PULSE);
+					for (i = 0; i < START_PULSE; i++);
+						_delay_us(1);
 					PORTB |= 0b00000010;
-					_delay_us(pulse_per);
+					for (i = 0; i < pulse_per; i++);
+						_delay_us(1);
 				}
 				else
 				{
@@ -107,11 +109,14 @@ int main (void)
 						PORTB &= 0b11111101;
 						OCR0A = pulse_width;
 						TCCR0B	=	0b00000011;			//set clock for /64, so 8uS per count.
-						_delay_us(START_PULSE);
+						for (i = 0; i < START_PULSE; i++);
+							_delay_us(1);
 						PORTB |= 0b00000010;
-						_delay_us(pulse_per);
+						for (i = 0; i < pulse_per; i++);
+							_delay_us(1);
 					}
-					_delay_us(burst_per);
+					for (i = 0; i < burst_per; i++);
+						_delay_us(1);
 				}
 				
 		}
@@ -137,8 +142,9 @@ int main (void)
 				OCR0A = counter_copy >> 3;		//this sets the output pulse width
 				counter_copy = 0;				//zero it back out for next pulse
 				TCCR0B	=	0b00000011;			//set clock for /64, so 8uS per count.
-				PORTB &= 0b11111101;	
-				_delay_us(START_PULSE);
+				PORTB &= 0b11111101;
+				for (i = 0; i < START_PULSE; i++);
+					_delay_us(1);
 				PORTB |= 0b00000010;
 			}
 			if(waiting_counter > 40000)			//no audio triggers have happened for 1 second
