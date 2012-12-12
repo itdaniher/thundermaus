@@ -1,27 +1,5 @@
-/*
-Micro SSTC C-code, Version 1.1?, Steve Ward, May 2012
-
-Extending the start up pulse here.
-
-Some input/output descriptions:
-PA0		not used
-PA1		not used
-PA2		signal voltage for analog input
-PA3		potentiometer 1 voltage input (controls pulse width)
-PA4		programming pin
-PA5		programming pin
-PA6		programming pin
-PA7		potentiometer 2 voltage input (controls frequency for timer)
-
-PB0		LED output
-PB1		audio/internal pulse timer select (HI = audio, LO = timer)
-PB2		tesla oscillator enable (LO = ENABLE, HI = DISABLE)
-PB3		RESET (programming pin)
-
-when programming the chip, set internal oscillator for 8MHZ, and BOD to 4.7V.
-*/
-
-
+// Micro SSTC C-code, Version 1.1?, Steve Ward, May 2012
+// Some changes by Ian Daniher, Dec. 2012
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -193,8 +171,8 @@ ISR(TIM1_OVF_vect)				//new ADC data is ready to be used
 
 ISR(TIM0_COMPA_vect)
 {				
-	TCCR0B = 0b00000000;		//stop timer counter
-	TCNT0 = 254;				//set it up so it starts just before zero
+	TCCR0B = 0;					// stop timer counter
+	TCNT0 = 254;				// set it up so it starts just before zero
 }
 
 uint16_t ADC_Read (uint8_t ADCpin)
