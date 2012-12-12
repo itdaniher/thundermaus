@@ -1,4 +1,12 @@
+### Sanify Firmware:
+
+* migrate from explicit bitmasks to condensed forms for readability
+* explicitly document datapath
+* look up 4v3 BOD firmware settings
+
 ### Rev2 -> Rev3
+
+#### ADD BOARD FILES - DANE
 
 * add soldermask & silkscreen
 * increase fill gap / spacing
