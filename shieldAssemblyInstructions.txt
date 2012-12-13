@@ -1,0 +1,21 @@
+Materials: 
+  Secondary
+  Corona Shield
+  2" solid core wire
+
+
+Fully Strip 2" of solid core wire (black or red spool)
+
+Wrap around corona shield so that one side points up
+
+Place shield on secondary (may require extra hands)
+
+Trim secondary to 4-8" of loose magnet wire
+
+Strip magnet wire with lighter
+
+Solder magnet wire to breakout point and corona shield
+
+Rotate shield to pick up slack in magnet wire
+
+CA shield in place on top of secondary
