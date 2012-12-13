@@ -5,22 +5,22 @@ Original design by [Steve Ward](http://www.arcattack.com/about.php), modified by
 
 <code>
 
-Some input/output descriptions:
-
-PA0		not used
-PA1		not used
-PA2		signal voltage for analog input
-PA3		potentiometer 1 voltage input (controls pulse width)
-PA4		programming pin
-PA5		programming pin
-PA6		programming pin
-PA7		potentiometer 2 voltage input (controls frequency for timer)
-
-PB0		LED
-PB1		gate squeltch - low = pull to 16v, high = gate feedback loop / oscillator enabled
-PB2		coil squeltch - low = pull to 16v, high = coil output squeltch
-PB3		RESET (programming pin)
-
-when programming the chip, set internal oscillator for 8MHZ, and BOD to 4.3V.
+	Some input/output descriptions:
+	
+	PA0		not used
+	PA1		not used
+	PA2		signal voltage for analog input
+	PA3		potentiometer 1 voltage input (controls pulse width)
+	PA4		programming pin
+	PA5		programming pin
+	PA6		programming pin
+	PA7		potentiometer 2 voltage input (controls frequency for timer)
+	
+	PB0		LED
+	PB1		gate squeltch - low = pull to 16v, high = gate feedback loop / oscillator enabled
+	PB2		coil squeltch - low = pull to 16v, high = coil output squeltch
+	PB3		RESET (programming pin)
+	
+	when programming the chip, set internal oscillator for 8MHZ, and BOD to 4.3V.
 
 </code>
